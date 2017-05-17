@@ -20,8 +20,6 @@ protected:
         std::vector<distance> location_distances;
         std::vector<drugs> need_drugs;
         std::vector<int> user_need_count;
-
-        double metric( std::pair<double,double> loc_A, std::pair<double,double> loc_B, std::string metric_name );
         
 private:
 
