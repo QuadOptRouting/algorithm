@@ -10,9 +10,9 @@ public:
         int get_sum();
         double get_time_money();
         
-        search_algorithm( std::shared_ptr<strategy> strategy_type, std::vector<drug> dr, std::vector<relation> rel, std::vector<distance> dist, std::vector<drugs> user_drugs, std::vector<int> user_need_count); //initialise algorithm;
+        search_algorithm( std::shared_ptr<strategy> strategy_type, std::vector<drug> dr, std::vector<relation> rel, std::vector<distance> dist); //initialise algorithm;
    
-        std::vector<alg_drugstore> use( std::vector<alg_drug> need_drugs, std::pair<double,double> location );
+        std::vector<drugstore_with_drugs> use_algoritgm( std::pair<double,double> location, std::vector<drugs> user_drugs, std::vector<int> user_need_count );
         
 protected:
     
@@ -20,7 +20,7 @@ protected:
         std::vector<distance> location_distances;
         std::vector<drugs> need_drugs;
         std::vector<int> user_need_count;
-        
+
         double metric( std::pair<double,double> loc_A, std::pair<double,double> loc_B, std::string metric_name );
         
 private:
